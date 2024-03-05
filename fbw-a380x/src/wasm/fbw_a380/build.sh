@@ -13,7 +13,7 @@ else
   CLANG_ARGS="-flto -O2 -DNDEBUG"
 fi
 
-set -ex
+set -e
 
 # create temporary folder for o files
 mkdir -p "${DIR}/obj"
@@ -118,6 +118,7 @@ clang++ \
   "${DIR}/src/model/look2_binlxpw.cpp" \
   "${DIR}/src/model/look2_pbinlxpw.cpp" \
   "${DIR}/src/model/mod_mvZvttxs.cpp" \
+  "${DIR}/src/model/mod_2RcCQkwc.cpp" \
   "${DIR}/src/model/MultiWordIor.cpp" \
   "${DIR}/src/model/rt_modd.cpp" \
   "${DIR}/src/model/rt_remd.cpp" \
