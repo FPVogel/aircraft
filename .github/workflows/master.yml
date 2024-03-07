@@ -54,13 +54,6 @@ jobs:
           cd ./fbw-a380x/out/
           7z a -t7z -m0=lzma2 -mx=7 ../../${{ env.BUILD_DIR_NAME }}/${{ env.MASTER_ZIP_NAME }} ./flybywire-aircraft-a380-842/
           cd ../../
-      - name: Delete old GitHub Pre-Release assets
-        uses: mknejp/delete-release-assets@v1
-        with:
-          token: ${{ github.token }}
-          tag: ${{ env.MASTER_PRE_RELEASE_TAG }}
-          assets: "${{ env.MASTER_ZIP_NAME }}"
-          fail-if-no-assets: false
       - name: Upload aircraft package to GitHub Pre-Release Assets
         uses: actions/upload-release-asset@v1.0.2
         env:
